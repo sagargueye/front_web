@@ -1,0 +1,77 @@
+{
+  "card_market": [
+    {
+      "id": 1,
+      "name": "Gogeta",
+      "description": "Gogeta card",
+      "family": "Sayen",
+      "affinity": "Sayen",
+      "imgUrl": "https://cartajouer.com/80766-thickbox_default/DBS_BT6_P_093_PR_Gogeta_SSB_Apogee_de_Fusion_DESTROYER_KINGS_Card_in_the_unity_Dragon_Ball_Super.jpg",
+      "energy": 100,
+      "hp": 48,
+      "defence": 23,
+      "attack": 299,
+      "price": 200,
+      "user": 6,
+      "store": null
+    },
+    {
+      "id": 2,
+      "name": "Vegeta",
+      "description": "Vegeta card",
+      "family": "Sayen",
+      "affinity": "Sayen",
+      "imgUrl": "https://cartajouer.com/74564-thickbox_default/DBS-TB1-001-UC-Vegeta-The-Tournament-Of-Power-Card-in-the-unity-Dragon-Ball-Super.jpg",
+      "energy": 100,
+      "hp": 48,
+      "defence": 23,
+      "attack": 65,
+      "price": 111,
+      "user": 6,
+      "store": null
+    }
+  ],
+  "users": [
+    {
+      "id": 6,
+      "login": "JaneDoe",
+      "pwd": "JaneDoe",
+      "account": 5000,
+      "lastName": "Jane",
+      "surName": "Doe",
+      "email": "JaneDoe@yopmail.com",
+      "cardList": [
+        {
+          "id": 3,
+          "name": "Goku",
+          "description": "Goku card",
+          "family": "Sayen",
+          "affinity": "Sayen",
+          "imgUrl": "https://ludiworld.com/newshop/50117-thickbox_default/son-goku-dragon-ball-super-card-game.jpg",
+          "energy": 100,
+          "hp": 48,
+          "defence": 23,
+          "attack": 65,
+          "price": 111,
+          "user": 6,
+          "store": null
+        },
+        {
+          "id": 4,
+          "name": "Goku Ultra Instinc",
+          "description": "Goku Ultra Instinc card",
+          "family": "Sayen",
+          "affinity": "Sayen",
+          "imgUrl": "https://m.media-amazon.com/images/I/81J9hbBYofL._AC_SL1336_.jpg",
+          "energy": 100,
+          "hp": 480,
+          "defence": 230,
+          "attack": 650,
+          "price": 300,
+          "user": 6,
+          "store": null
+        }
+      ]
+    }
+  ]
+}
