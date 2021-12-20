@@ -1,32 +1,38 @@
-import logo from './logo.svg';
-import Home from  './pages/home';
-import menu_nav from "./pages/menu_nav";
-import React from "react";
+import './App.css';
+
+// Route
+import {Route, Switch} from "react-router-dom";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import Buy from "./pages/Buy";
+import Sell from "./pages/Sell";
+import SignIn from "./pages/SignIn";
+
+import {useState} from "react";
+
+// Authentication
+import {hasAuthenticated} from "./services/AuthApi";
+import Auth from "./contexts/Auth";
+import AuthenticatedRoute from "./components/AuthenticatedRoute";
+import Profile from "./pages/Profile";
+import Play from "./pages/Play";
 
 function App() {
-  return (
-        <div className="Home">
-            <Home/>
-
-            {Home}
-        </div>
-
-      /*
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-*/
-  );
+    const [isAuthenticated, setIsAuthenticated] = useState(hasAuthenticated())
+    ;
+    return (
+        <Auth.Provider value={{isAuthenticated, setIsAuthenticated}}>
+            <Switch>
+                <Route exact path="/" component={Home}/>
+                <AuthenticatedRoute exact path={"/Buy"} component={Buy}/>
+                <AuthenticatedRoute exact path={"/Sell"} component={Sell}/>
+                <AuthenticatedRoute exact path={"/Profile"} component={Profile}/>
+                <AuthenticatedRoute exact path="/Play" component={Play} />
+                <Route exact path={"/SignIn"} component={SignIn}/>
+                <Route component={NotFound}/>
+            </Switch>
+        </Auth.Provider>
+    );
 }
 
 export default App;
