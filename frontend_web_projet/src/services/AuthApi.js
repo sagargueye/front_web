@@ -21,7 +21,7 @@ export async function login(credentials) {
         username: "test",
         password: "test"
     }
-    const api_url = "https://asi2.aiveo.fr/api/user/auth?login="+login+"&pwd="+pwd
+    //const api_url = "https://asi2.aiveo.fr/api/user/auth?login="+login+"&pwd="+pwd
 
     await axios
         .get(api_url)
@@ -31,7 +31,7 @@ export async function login(credentials) {
        .catch(error => {addItem('userId', 6)})
 
 
-    const url_api = "https://asi2.aiveo.fr/api/user/user/"+ getItem("userId")
+    //const url_api = "https://asi2.aiveo.fr/api/user/user/"+ getItem("userId")
     axios.get(url_api).then((response) => {
         addItem('userLogin', (response.data.login))})
 
@@ -42,7 +42,7 @@ export async function login(credentials) {
     }
 
     return axios
-        .post('https://asi2.aiveo.fr/api/jwt/users/authenticate', getToken)
+        .post('https://asi2.aiveo.fr/api/jwt/users/authenticatettttt', getToken)
         .then(response => response.data.token)
         .then(token => {
             addItem('token', token);
