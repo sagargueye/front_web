@@ -1,20 +1,23 @@
-import './App.css';
+import './style/App.css';
 
 // Route
 import {Route, Switch} from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/home";
+
 /*
 import NotFound from "./pages/No:tFound";
 import Buy from "./pages/Buy";
 import Sell from "./pages/Sell";
 import SignIn from "./pages/SignIn";
 */
+
 import {useState} from "react";
 
 // Authentication
 //import {hasAuthenticated} from "./services/AuthApi";
 import Auth from "./contexts/Auth";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
+
 /*
 import Profile from "./pages/Profile";
 import Play from "./pages/Play";
