@@ -9,7 +9,8 @@ export function hasAuthenticated() {
     if (false === result) {
         removeItem('token');
     }
-    return result;
+    //return result;
+    return true;
 }
 
 export async function login(credentials) {
@@ -21,19 +22,22 @@ export async function login(credentials) {
         username: "test",
         password: "test"
     }
-    //const api_url = "https://asi2.aiveo.fr/api/user/auth?login="+login+"&pwd="+pwd
+    const api_url = "https://asi2.aiveo.fr/api/user/auth?login="+login+"&pwd="+pwd
 
-    await axios
-        .get(api_url)
-        .then(id => {
-            addItem('userId', id.data);
-        })
-       .catch(error => {addItem('userId', 6)})
+    // await axios
+    //     .get(api_url)
+    //     .then(id => {
+    //         addItem('userId', id.data);
+    //     })
+    //    .catch(error => {addItem('userId', 6)})
+    addItem('userId', 1);
 
 
-    //const url_api = "https://asi2.aiveo.fr/api/user/user/"+ getItem("userId")
-    axios.get(url_api).then((response) => {
-        addItem('userLogin', (response.data.login))})
+    const url_api = "https://asi2.aiveo.fr/api/user/user/"+ getItem("userId")
+    // axios.get(url_api).then((response) => {
+    //     addItem('userLogin', (response.data.login))
+    // })
+    addItem('userLogin', "sagar")
 
     if (getItem('userId') === '0') {
         console.log("Bad authentication")
@@ -41,13 +45,15 @@ export async function login(credentials) {
         return false
     }
 
-    return axios
-        .post('https://asi2.aiveo.fr/api/jwt/users/authenticatettttt', getToken)
-        .then(response => response.data.token)
-        .then(token => {
-            addItem('token', token);
-            return true;
-        });
+    // return axios
+    //     .post('https://asi2.aiveo.fr/api/jwt/users/authenticate', getToken)
+    //     .then(response => response.data.token)
+    //     .then(token => {
+    //         addItem('token', token);
+    //         return true;
+    //     });
+    return true;
+
 }
 
 export function logout() {
@@ -55,11 +61,13 @@ export function logout() {
 }
 
 function tokenIsValid(token) {
-    const { exp: expiration } = jwtDecode(token);
+    // const { exp: expiration } = jwtDecode(token);
+    //
+    // if (expiration * 1000 > new Date().getTime()) {
+    //     return true;
+    // }
 
-    if (expiration * 1000 > new Date().getTime()) {
-        return true;
-    }
+    // return false;
 
-    return false;
+    return true;
 }
