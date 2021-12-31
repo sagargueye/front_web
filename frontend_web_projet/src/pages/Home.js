@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Navigation from "../components/Navigation";
+import vins from "../components/Vins/VinList";
 import LinkCard from "../components/Cards/LinkCard";
 import Footer from "../components/Footer";
 

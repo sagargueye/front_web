@@ -1,4 +1,3 @@
-import './App.css';
 
 // Route
 import {Route, Switch} from "react-router-dom";
