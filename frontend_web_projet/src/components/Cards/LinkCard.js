@@ -17,7 +17,7 @@ const LinkCard = (props) => {
                 <p className="card-text">
                     {card.text}
                 </p>
-                <Link style={{padding: "10px"}} to={card.url} className="btn btn-primary">{card.action}</Link>
+                {/*<Link style={{padding: "10px"}} to={card.url} className="btn btn-primary">{card.action}</Link>*/}
             </div>
         </div>
     );

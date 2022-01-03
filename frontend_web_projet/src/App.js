@@ -14,6 +14,10 @@ import {hasAuthenticated} from "./services/AuthApi";
 import Auth from "./contexts/Auth";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import Profile from "./pages/Profile";
+import SearchCriteria from "./pages/SearchCriteria";
+import AboutUs from "./pages/AboutUs";
+import MaCave from "./pages/MaCave";
+
 
 function App() {
     const [isAuthenticated, setIsAuthenticated] = useState(hasAuthenticated())
@@ -22,9 +26,10 @@ function App() {
         <Auth.Provider value={{isAuthenticated, setIsAuthenticated}}>
             <Switch>
                 <Route exact path="/" component={Home}/>
-                <AuthenticatedRoute exact path={"/Buy"} component={Buy}/>
-                <AuthenticatedRoute exact path={"/Sell"} component={Sell}/>
                 <AuthenticatedRoute exact path={"/Profile"} component={Profile}/>
+                <Route exact path={"/Search"} component={SearchCriteria}/>
+                <Route exact path={"/AboutUs"} component={AboutUs}/>
+                <AuthenticatedRoute exact path={"/MaCave"} component={MaCave}/>
                 <Route exact path={"/SignIn"} component={SignIn}/>
                 <Route component={NotFound}/>
             </Switch>

@@ -59,49 +59,56 @@ const Navigation = () => {
 
 
             <nav className="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-                    <div className="container">
-                        {/*<a className="navbar-brand" href="#page-top">La cave</a>*/}
-                        <a href="#" className="navbar-brand">
-                            <img src={"/images/logo1-transparent.png"} width="45" alt=""
-                                 lassName="d-inline-block align-middle mr-2"/>
-                                <span >La cave</span>
-                        </a>
+                <div className="container">
+                    {/*<a className="navbar-brand" href="#page-top">La cave</a>*/}
+                    <a href="#" className="navbar-brand">
+                        <img src={"/images/logo1-transparent.png"} width="45" alt=""
+                             lassName="d-inline-block align-middle mr-2"/>
+                            <span >La cave</span>
+                    </a>
 
-                        <button className="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
-                                type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                            Menu
-                            <i className="fas fa-bars"></i>
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarResponsive">
-                            <ul className="navbar-nav ms-auto">
-                                <li className="nav-item mx-0 mx-lg-1"><a className="nav-link py-3 px-0 px-lg-3 rounded"
-                                                                         href="#portfolio">Accueil</a></li>
-                                <li className="nav-item mx-0 mx-lg-1"><a className="nav-link py-3 px-0 px-lg-3 rounded"
-                                                                         href="#about">Mon profil</a></li>
-                                <li className="nav-item mx-0 mx-lg-1"><a className="nav-link py-3 px-0 px-lg-3 rounded"
-                                                                         href="#contact">Ma cave</a></li>
-                                <li className="nav-item mx-0 mx-lg-1"><a className="nav-link py-3 px-0 px-lg-3 rounded"
-                                                                         href="#contact">Recherche</a></li>
-                                <li className="nav-item mx-0 mx-lg-1"><a className="nav-link py-3 px-0 px-lg-3 rounded"
-                                                                         href="#contact">A propos</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+                    <button className="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        Menu
+                        <i className="fas fa-bars"></i>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarResponsive">
+                        <ul className="navbar-nav ms-auto">
+                            <li className="nav-item mx-0 mx-lg-1">
+                                <a className="nav-link py-3 px-0 px-lg-3 rounded" href={"/"}>
+                                    Accueil
+                                </a>
+                            </li>
 
-            <header class="masthead bg-primary text-white text-center">
-                <div class="container d-flex align-items-center flex-column">
-                    <img class="masthead-avatar mb-5" src={"/images/logo1-transparent.png"} alt="..." />
-                    <h1 class="masthead-heading text-uppercase mb-0">Bienvenu à la cave</h1>
-                    <div class="divider-custom divider-light">
-                        <div class="divider-custom-line"></div>
-                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                        <div class="divider-custom-line"></div>
+                            <li className="nav-item mx-0 mx-lg-1">
+                                <a className="nav-link py-3 px-0 px-lg-3 rounded" href={"/profile"}>
+                                    Mon profil
+                                </a>
+                            </li>
+
+                            <li className="nav-item mx-0 mx-lg-1">
+                                <a className="nav-link py-3 px-0 px-lg-3 rounded" href={"/MaCave"}>
+                                    Ma cave
+                                </a>
+                            </li>
+
+                            <li className="nav-item mx-0 mx-lg-1">
+                                <a className="nav-link py-3 px-0 px-lg-3 rounded" href={"/search"}>
+                                    Recherche
+                                </a>
+                            </li>
+
+                            <li className="nav-item mx-0 mx-lg-1">
+                                <a className="nav-link py-3 px-0 px-lg-3 rounded" href={"/AboutUs"}>
+                                    A propos
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <p class="masthead-subheading font-weight-light mb-0">Découvrez notre riche collection de vin </p>
                 </div>
-            </header>
+            </nav>
+
         </div>
     );
 };
