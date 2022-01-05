@@ -8,10 +8,10 @@ body {
     border-radius: 3px
 }
 
-.processor {
-    background-color: #fff;
-    margin-top: 5px;
-    border-bottom: 1px solid #eee
+.categories {
+    border-bottom: 1px solid #eee;
+    background-color: #2c3e5014;
+    border-radius: 5px;
 }
 
 .brand {
@@ -27,7 +27,8 @@ body {
     padding: 10px;
     background-color: #fff;
     border-radius: 5px;
-    position: relative
+    position: relative;
+    border: 1px solid #eeeeee;
 }
 
 .about span {
@@ -38,8 +39,9 @@ body {
 .cart-button button {
     font-size: 12px;
     color: #fff;
-    background-color: #5629c0;
-    height: 38px
+    /*background-color: #5629c0;*/
+    height: 38px;
+    padding: inherit;
 }
 
 .cart-button button:focus,
@@ -74,7 +76,7 @@ button:active {
 }
 
 .product_fav:hover {
-    background: #5629c0
+    /*background: #5629c0*/
 }
 
 .product_fav:hover i {
@@ -99,4 +101,11 @@ button:active {
     align-items: center;
     justify-content: center;
     color: #fff
+}
+.product div img{
+    /*width: 100%;*/
+    /*height: 200px;*/
+}
+.product .image-block {
+    /*width: 200px;*/
 }

@@ -17,6 +17,7 @@ import Profile from "./pages/Profile";
 import SearchCriteria from "./pages/SearchCriteria";
 import AboutUs from "./pages/AboutUs";
 import MaCave from "./pages/MaCave";
+import VoirCave from "./components/Caves/VoirCave";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
                 <Route exact path={"/Search"} component={SearchCriteria}/>
                 <Route exact path={"/AboutUs"} component={AboutUs}/>
                 <AuthenticatedRoute exact path={"/MaCave"} component={MaCave}/>
+                <AuthenticatedRoute exact path={"/VoirCave/:id"} component={VoirCave}/>
                 <Route exact path={"/SignIn"} component={SignIn}/>
                 <Route component={NotFound}/>
             </Switch>
